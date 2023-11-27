@@ -104,7 +104,7 @@ extension ProductsListViewController: UITableViewDataSource, UITableViewDelegate
         
         guard let currentProduct = productsViewModel.products?[indexPath.row],
               // FIXME: tableView used instead of productsTableView
-              let cell = productsTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
+              let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
         else {
             return UITableViewCell()
         }
